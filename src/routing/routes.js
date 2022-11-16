@@ -12,7 +12,7 @@ const { processBigArray } = require('../services/process-big-array');
 const { processBigArrayStreams } = require('../services/process-big-array-streams');
 const { getCachedUserSalary } = require('../services/get-cached-user-salary');
 
-// Aso we can use different tools for caching (redis, node-cache, etc).
+// Also we can use different tools for caching (redis, node-cache, etc).
 router.get('/cached-user-salary/name/:name/city/:city', caching, runner(getCachedUserSalary));
 router.get('/user-salary/name/:name/city/:city', runner(getUserSalary));
 
